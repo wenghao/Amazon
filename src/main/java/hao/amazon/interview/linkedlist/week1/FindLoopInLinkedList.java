@@ -1,4 +1,4 @@
-package hao.amazon.interview.week1;
+package hao.amazon.interview.linkedlist.week1;
 
 import java.util.HashMap;
 
