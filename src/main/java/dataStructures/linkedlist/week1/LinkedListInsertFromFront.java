@@ -1,4 +1,4 @@
-package hao.amazon.interview.linkedlist.week1;
+package dataStructures.linkedlist.week1;
 
 /**
  * Created by HWENG on 1/10/2016.

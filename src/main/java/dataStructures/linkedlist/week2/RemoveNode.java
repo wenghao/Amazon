@@ -1,6 +1,4 @@
-package hao.amazon.interview.linkedlist.week2;
-
-import com.sun.org.apache.regexp.internal.RE;
+package dataStructures.linkedlist.week2;
 
 /**
  * Created by HWENG on 1/16/2016.
