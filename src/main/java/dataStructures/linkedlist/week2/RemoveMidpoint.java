@@ -59,7 +59,7 @@ public class RemoveMidpoint {
             return head;
         }
 
-        int listSize = 5;
+        int listSize = 0;
         int midLength = 0;
         Node current = head;
         Node newList = head;
@@ -82,7 +82,7 @@ public class RemoveMidpoint {
         while(midLength > 0){
 
             if(midLength==2){
-                newList = newList.next.next;
+                newList.next = newList.next.next;
                 System.out.println("The new list is " + newList.data);
                 break;
             }
