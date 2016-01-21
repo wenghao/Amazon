@@ -61,7 +61,7 @@ public class MergeTwoSortedListsInReverseOrder {
         Node linkedList = mergeOrder.MergerTwoSortedListsInReverse(A, B);
 
         while(linkedList!=null){
-            System.out.println("The node contains " + linkedList.data);
+            System.out.print(linkedList.data + " ,");
             linkedList = linkedList.next;
         }
     }
@@ -69,11 +69,8 @@ public class MergeTwoSortedListsInReverseOrder {
     public Node MergerTwoSortedListsInReverse(Node list1, Node list2){
         if(list1==null && list2==null){
             return null;
-        }else if(list1==null){
-            return list2;
-        }else if(list2==null){
-            return list2;
         }
+
         Node current = null;
         Node head = null;
         while(list1!=null || list2!=null){
