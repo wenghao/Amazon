@@ -30,6 +30,7 @@ public class MergeTwoSortedListsInReverseOrder {
         Node node5 = new Node(45);
         Node node6 = new Node(100);
         Node node7 = new Node(1000);
+        Node node8 = new Node(10080);
 
         Node nodeA = new Node(4);
         Node nodeB = new Node(5);
@@ -45,6 +46,7 @@ public class MergeTwoSortedListsInReverseOrder {
         node4.next = node5;
         node5.next = node6;
         node6.next = node7;
+        node7.next = node8;
 
         Node A = node1;
 
@@ -56,11 +58,11 @@ public class MergeTwoSortedListsInReverseOrder {
         nodeF.next = nodeG;
 
         Node B = nodeA;
-
         Node linkedList = mergeOrder.MergerTwoSortedListsInReverse(A, B);
 
         while(linkedList!=null){
             System.out.println("The node contains " + linkedList.data);
+            linkedList = linkedList.next;
         }
     }
 
@@ -74,22 +76,14 @@ public class MergeTwoSortedListsInReverseOrder {
         }
         Node current = null;
         Node head = null;
-        while(list1!=null && list2!=null){
-
+        while(list1!=null || list2!=null){
             if(list1==null){
-                System.out.println("list1 is null");
                 current = list2;
                 list2 = list2.next;
-                current.next = head;
-                head = current;
             }else if(list2==null){
-                System.out.println("list1 is null");
                 current = list1;
                 list1 = list1.next;
-                current.next = head;
-                head = current;
             }else{
-                System.out.println("list1 and list2 are not null");
                 if(list1.data < list2.data){
                     current = list1;
                     list1 = list1.next;
@@ -97,12 +91,10 @@ public class MergeTwoSortedListsInReverseOrder {
                     current = list2;
                     list2 = list2.next;
                 }
-
-                current.next = head;
-                head = current;
             }
-            System.out.println("head.data " + head.data);
 
+            current.next = head;
+            head = current;
         }
         return head;
     }
