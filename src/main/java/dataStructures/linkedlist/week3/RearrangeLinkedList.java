@@ -3,6 +3,12 @@ package dataStructures.linkedlist.week3;
 /**
  * Created by HWENG on 1/28/2016.
  */
+
+/*
+* Given a singly linked list L0 -> L1 -> … -> Ln-1 -> Ln.
+* Rearrange the nodes in the list so that the new formed list is : L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 …
+*
+* */
 public class RearrangeLinkedList {
     public static class Node{
         int data;
